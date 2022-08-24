@@ -1,0 +1,59 @@
+{
+  "name": "@kaishens.cn/react-web-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node config/esbuild/dev.js",
+    "build:ci": "node config/esbuild/production.js",
+    "build:analysis": "",
+    "lint": "eslint --ext .tsx --ext .ts src/ && prettier --check src/",
+    "lint:fix": "eslint --ext .tsx --ext .ts src/ --fix && prettier --write src/"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "",
+  "license": "ISC",
+  "prettier": {
+    "singleQuote": true,
+    "tabWidth": 2,
+    "printWidth": 120,
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.242",
+    "@swc/helpers": "^0.4.11",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.34.0",
+    "@typescript-eslint/parser": "^5.34.0",
+    "autoprefixer": "^10.4.8",
+    "cz-conventional-changelog": "^3.3.0",
+    "deepmerge": "^4.2.2",
+    "esbuild": "^0.15.5",
+    "esbuild-sass-plugin": "^2.3.2",
+    "eslint": "^8.22.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "jsdom": "^20.0.0",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0",
+    "livereload": "^0.9.3",
+    "postcss": "^8.4.16",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
