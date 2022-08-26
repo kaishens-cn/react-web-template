@@ -5,6 +5,7 @@ const serveStatic = require('koa-static');
 const livereload = require('livereload');
 const path = require('path');
 const fs = require('fs');
+const open = require('open');
 const hotUpdate = require('./plugins/hotUpdate');
 
 const app = new koa();
@@ -32,12 +33,16 @@ baseConfig.config.sourcemap = true;
 
 baseConfig.config.plugins.push(hotUpdate(path.resolve(baseConfig.rootPath, 'dist/index.html')));
 
+const port = 3000;
+const url = `http://localhost:${port}/`;
+open(url);
+
 esbuild
   .build(baseConfig.config)
   .then(() => {
     // 这里重写html
-    app.listen(3000, () => {
-      console.log(`> Local:    http://localhost:3000/`);
+    app.listen(port, () => {
+      console.log(`> Local:    ${url}`);
     });
   })
   .catch(e => {

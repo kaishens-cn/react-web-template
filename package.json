@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node config/esbuild/dev.js",
     "build:ci": "node config/esbuild/production.js",
-    "build:analysis": "",
+    "build:analysis": "node config/esbuild/analysis.js",
     "lint": "eslint --ext .tsx --ext .ts src/ && prettier --check src/",
     "lint:fix": "eslint --ext .tsx --ext .ts src/ --fix && prettier --write src/"
   },
@@ -42,6 +42,7 @@
     "koa": "^2.13.4",
     "koa-static": "^5.0.0",
     "livereload": "^0.9.3",
+    "open": "^8.4.0",
     "postcss": "^8.4.16",
     "pre-commit": "^1.2.2",
     "prettier": "^2.7.1"
