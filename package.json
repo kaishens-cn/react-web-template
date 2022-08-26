@@ -32,6 +32,7 @@
     "@typescript-eslint/parser": "^5.34.0",
     "cz-conventional-changelog": "^3.3.0",
     "esbuild": "^0.15.5",
+    "esbuild-plugin-svgr": "^1.0.1",
     "esbuild-style-plugin": "^1.6.0",
     "eslint": "^8.22.0",
     "eslint-plugin-import": "^2.26.0",
