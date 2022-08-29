@@ -24,13 +24,14 @@
     "arrowParens": "avoid"
   },
   "devDependencies": {
-    "@swc/core": "^1.2.242",
+    "@swc/core": "^1.2.244",
     "@swc/helpers": "^0.4.11",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "^5.34.0",
     "@typescript-eslint/parser": "^5.34.0",
     "cz-conventional-changelog": "^3.3.0",
+    "deepmerge": "^4.2.2",
     "esbuild": "^0.15.5",
     "esbuild-plugin-svgr": "^1.0.1",
     "esbuild-style-plugin": "^1.6.0",
