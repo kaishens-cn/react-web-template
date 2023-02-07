@@ -5,7 +5,9 @@
     "sort-imports":"off",
     "import/order": "off",
     "simple-import-sort/imports": "error",
-    "simple-import-sort/exports": "error"
+    "simple-import-sort/exports": "error",
+    "semi": [0],
+    "eol-last": [0]
   },
   "parserOptions":{
     "ecmaVersion": "latest",
