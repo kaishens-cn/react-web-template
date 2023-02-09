@@ -2,12 +2,9 @@
   "name": "@kaishens.cn/react-web-template",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node config/esbuild/dev.js",
-    "build:ci": "node config/esbuild/production.js",
-    "build:analysis": "node config/esbuild/analysis.js",
+    "start": "vite",
+    "build": "tsc && vite build",
     "lint": "eslint --ext .tsx --ext .ts src/ && prettier --check src/",
     "lint:fix": "eslint --ext .tsx --ext .ts src/ --fix && prettier --write src/"
   },
@@ -16,41 +13,28 @@
   ],
   "author": "",
   "license": "ISC",
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 2,
-    "printWidth": 120,
-    "trailingComma": "none",
-    "arrowParens": "avoid"
-  },
   "devDependencies": {
-    "@swc/core": "^1.2.244",
-    "@swc/helpers": "^0.4.11",
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.34.0",
-    "@typescript-eslint/parser": "^5.34.0",
+    "@types/babel__core": "^7.20.0",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "@vitejs/plugin-react": "^3.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "deepmerge": "^4.2.2",
-    "esbuild": "^0.15.5",
-    "esbuild-plugin-svgr": "^1.0.1",
-    "esbuild-style-plugin": "^1.6.0",
-    "eslint": "^8.22.0",
-    "eslint-plugin-import": "^2.26.0",
+    "eslint": "^8.33.0",
+    "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "jsdom": "^20.0.0",
-    "koa": "^2.13.4",
-    "koa-static": "^5.0.0",
-    "livereload": "^0.9.3",
-    "open": "^8.4.0",
     "pre-commit": "^1.2.2",
-    "prettier": "^2.7.1",
-    "sass": "^1.54.5"
+    "prettier": "^2.8.3",
+    "sass": "^1.58.0",
+    "terser": "^5.16.3",
+    "typescript": "^4.9.5",
+    "vite": "^4.1.1"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.3.0"
+    "react-router-dom": "^6.8.1"
   },
   "config": {
     "commitizen": {
