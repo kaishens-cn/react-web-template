@@ -2,7 +2,7 @@ import React from 'react';
 
 import LogoIcon from '@/assets/logo.svg';
 
-import styles from './index.module.scss';
+import styles from './index.scss';
 
 const Home = () => {
   return (
