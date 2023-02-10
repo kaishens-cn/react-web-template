@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react';
 import * as path from 'path';
 import { defineConfig } from 'vite';
-import loadCssModulePlugin from 'vite-plugin-load-css-module';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,10 +9,7 @@ export default defineConfig({
     target: 'es2015',
   },
   plugins: [
-      react(),
-    loadCssModulePlugin({
-      include: id => id.endsWith('scss') && !id.includes('node_modules'),
-    })
+    react(),
   ],
   resolve: {
     alias: { '@': path.resolve(__dirname, 'src') },
